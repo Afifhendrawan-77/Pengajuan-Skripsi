@@ -1,0 +1,37 @@
+<div class="box">
+    <div class="box-header with-border">
+        <h3 class="box-title">Master <?= $subjudul ?></h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="mt-2 mb-4">
+
+            <div class="pull-right">
+                <button onclick="bulk_delete()" class="btn btn-sm btn-danger btn-flat" type="button"><i class="fa fa-trash"></i> Delete</button>
+            </div>
+        </div>
+        <?= form_open('dosen/delete', array('id' => 'bulk')) ?>
+        <table id="dosen" class="w-100 table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>NIM</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Email</th>
+                    <th class="text-center">Action</th>
+                    <th class="text-center">Tanggal Sidang</th>
+                    <th class="text-center"> Beri Nilai</th>
+                        <input type="checkbox" class="select_all">
+                    </th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <?= form_close() ?>
+    </div>
+</div>
+
+<script src="<?= base_url() ?>assets/dist/js/app/master/dosen/data.js"></script>
